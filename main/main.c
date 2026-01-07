@@ -6,6 +6,7 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "say_hello.h"
 
 static const char *TAG="kconfig_demo";
 
@@ -23,6 +24,10 @@ void app_main(void)
         ESP_LOGI(TAG, "Info");
         ESP_LOGD(TAG, "Debug");
         ESP_LOGV(TAG, "Verbose");
+
+#ifdef CONFIG_SAY_HELLO
+        say_hello();
+#endif
 
         delay(sleep_time_ms);
     }
