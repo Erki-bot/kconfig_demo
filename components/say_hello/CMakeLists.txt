@@ -3,7 +3,7 @@ set(srcs)
 set(include_dirs "include")
 
 if (CONFIG_SAY_HELLO)
-    list(APPEND srcs, "say_hello.c")
+    list(APPEND srcs "say_hello.c")
 endif ()
 
 idf_component_register(
